@@ -1,0 +1,141 @@
+
+:root {
+    --main-bg-color: #f5f5f5;
+    --card-bg-color: white;
+    --text-color: #333;
+    --subtext-color: #666;
+    --hover-shadow: rgba(0, 0, 0, 0.2);
+}
+
+
+.quote-container {
+    padding: 10px;
+    background-color: var(--main-bg-color);
+    max-width: 1600px;
+    margin: 20px auto; 
+}
+
+
+.quote-heading {
+    text-align: left;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+
+.quote-subheading {
+    text-align: left;
+    font-size: 1.5rem;
+    color: var(--subtext-color);
+    margin-bottom: 30px;
+}
+
+.quote-cards {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+
+.quote-card {
+    flex: 1 1 calc(33.33% - 20px); 
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-bg-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--hover-shadow);
+    min-width: 250px; 
+    transition: transform 0.2s, box-shadow 0.2s; 
+}
+
+.quote-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px var(--hover-shadow);
+}
+
+.quote-text {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.quote-content {
+    display: flex;
+    align-items: center;
+}
+
+.quote-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.quote-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.quote-title {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.quote-description {
+    font-size: 1rem;
+    color: var(--subtext-color);
+}
+
+
+@media (max-width: 1024px) {
+    .quote-card {
+        flex: 1 1 calc(50% - 20px); 
+    }
+
+    .quote-heading {
+        font-size: 2rem; 
+    }
+
+    .quote-subheading {
+        font-size: 1.2rem; 
+    }
+}
+
+@media (max-width: 768px) {
+    .quote-card {
+        flex: 1 1 100%; 
+    }
+
+    .quote-heading {
+        font-size: 1.8rem; 
+    }
+
+    .quote-subheading {
+        font-size: 1rem; 
+    }
+
+    .quote-text {
+        font-size: 1rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .quote-container {
+        padding: 5px; 
+    }
+
+    .quote-card {
+        padding: 15px; 
+    }
+
+    .quote-title {
+        font-size: 1.3rem; 
+    }
+
+    .quote-description {
+        font-size: 0.9rem; 
+    }
+}

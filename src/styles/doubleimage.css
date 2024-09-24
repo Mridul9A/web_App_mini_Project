@@ -1,0 +1,49 @@
+.double-image-container {
+    display: flex;
+    width: 100%;
+    height: 50vh; 
+    padding: 25px;
+    box-sizing: border-box; 
+}
+
+.image-wrapper {
+    flex: 1; 
+    overflow: hidden; 
+    padding: 20px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+
+@media (max-width: 768px) {
+    .double-image-container {
+        flex-direction: column; 
+        height: auto; 
+    }
+
+    .image-wrapper {
+        padding: 15px; 
+    }
+
+    .image {
+        height: 40vh; 
+    }
+}
+
+@media (max-width: 480px) {
+    .double-image-container {
+        padding: 10px; 
+    }
+
+    .image-wrapper {
+        padding: 10px; 
+    }
+
+    .image {
+        height: 30vh; 
+    }
+}
